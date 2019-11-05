@@ -19,7 +19,7 @@ def user_tweets(request):
 
     context = {'posts': posts}
 
-    return render(request, 'tweets/my_tweets.html', context)
+    return render(request, 'peaky_twitter/post_list.html', context)
 
 
 def detail(request, tweet_id):
