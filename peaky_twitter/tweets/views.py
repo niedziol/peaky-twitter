@@ -18,7 +18,7 @@ def user_tweets(request):
     posts = Post.objects.filter(author=request.user)
 
     context = {'posts': posts}
-    print(context)
+
     return render(request, 'tweets/my_tweets.html', context)
 
 

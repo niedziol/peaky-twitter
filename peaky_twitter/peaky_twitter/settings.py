@@ -71,6 +71,8 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/tweets/my_tweets'
+
 WSGI_APPLICATION = 'peaky_twitter.wsgi.application'
 
 
