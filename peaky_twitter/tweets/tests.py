@@ -1,3 +1,9 @@
 from django.test import TestCase
+from tweets.models import Post
 
-# Create your tests here.
+from model_bakery import baker
+
+class PostTestCase(TestCase):
+    def test_title(self):
+        st = baker.make(Post)
+        self.assertEqual(True, True)
