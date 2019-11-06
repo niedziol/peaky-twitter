@@ -30,4 +30,4 @@ jobs:
         echo "secret_key_for_tests" > peaky_twitter/secret.txt
     - name: Test with django
       run: |
-        python peaky_twitter/manage.py test
+        python peaky_twitter/manage.py test peaky_twitter
