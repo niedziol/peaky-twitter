@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import Http404
-from django.template import loader
 from tweets.models import Post
 from django.contrib.auth.decorators import login_required
 
