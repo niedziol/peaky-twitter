@@ -8,9 +8,9 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     all_posts = Post.objects.all().order_by('-date')
 
-    context = {'all_posts': all_posts}
+    context = {'posts': all_posts}
 
-    return render(request, 'tweets/index.html', context)
+    return render(request, 'tweets/post_list.html', context)
 
 
 @login_required(login_url='/accounts/login/')
@@ -19,7 +19,7 @@ def user_tweets(request):
 
     context = {'posts': posts}
 
-    return render(request, 'peaky_twitter/post_list.html', context)
+    return render(request, 'tweets/post_list.html', context)
 
 
 def detail(request, tweet_id):
