@@ -24,6 +24,10 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Create secret.txt
+      run: |
+        touch peaky_twitter/secret.txt
+        echo "secret_key_for_tests" > peaky_twitter/secret.txt
     - name: Test with django
       run: |
         python peaky_twitter/manage.py test
