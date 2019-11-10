@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'tweets.apps.TweetsConfig',
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +72,8 @@ TEMPLATES = [
     },
 ]
 
-LOGIN_REDIRECT_URL = '/tweets/my_tweets'
+LOGIN_REDIRECT_URL = '/tweets/'
+LOGOUT_REDIRECT_URL = '/tweets/'
 
 WSGI_APPLICATION = 'peaky_twitter.wsgi.application'
 
