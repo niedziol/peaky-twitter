@@ -1,5 +1,5 @@
 from django.test import TestCase
-from tweets.models import Post
+from .models import Post
 
 from model_bakery import baker
 

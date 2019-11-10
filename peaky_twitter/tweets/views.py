@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import Http404
-from tweets.models import Post
+from django.utils import timezone
+
+from .models import Post
+from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -27,3 +30,17 @@ def detail(request, tweet_id):
     except Post.DoesNotExist:
         raise Http404("Tweet does not exist")
     return render(request, 'tweets/detail.html', {'tweet': tweet})
+
+
+def post_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.date = timezone.now()
+            post.save()
+            return redirect('index')
+    else:
+        form = PostForm()
+    return render(request, 'tweets/post_edit.html', {'form': form})

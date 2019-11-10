@@ -1,3 +1,6 @@
+# PyCharm
+.idea/
+
 # Secret
 peaky_twitter/secret.txt
 
