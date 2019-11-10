@@ -26,12 +26,13 @@ def user_tweets(request):
 
 def detail(request, tweet_id):
     try:
-        tweet = Post.objects.get(pk=tweet_id)
+        post = Post.objects.get(pk=tweet_id)
     except Post.DoesNotExist:
         raise Http404("Tweet does not exist")
-    return render(request, 'tweets/detail.html', {'tweet': tweet})
+    return render(request, 'tweets/post_details.html', {'post': post})
 
 
+@login_required(login_url='/accounts/login/')
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)

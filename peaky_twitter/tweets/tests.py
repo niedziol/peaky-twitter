@@ -6,5 +6,6 @@ from model_bakery import baker
 
 class PostTestCase(TestCase):
     def test_title(self):
-        st = baker.make(Post)
+        post = baker.make(Post)
+        post.save()
         self.assertEqual(True, True)
