@@ -1,6 +1,9 @@
 # PyCharm
 .idea/
 
+# Assets
+peaky_twitter/assets/
+
 # Secret
 peaky_twitter/secret.txt
 
