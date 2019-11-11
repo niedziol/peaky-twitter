@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>New post</h2>
-  <form method="POST" class="post-form">{% csrf_token %}
-    {{ form.as_ul }}
-    <button type="submit" class="save btn btn-default">Save</button>
-  </form>
+  <div class="card">
+    <h2 class="card-title">New post</h2>
+    <form method="POST" class="form">{% csrf_token %}
+      {% for field in form %}
+        <div class="form-group">
+          <span class="col px-md-5">{{ field.label_tag }}</span><br/>
+          <span class="col px-md-5">{{ field }}</span><br/>
+        </div>
+      {% endfor %}
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    </form>
+  </div>
 {% endblock %}

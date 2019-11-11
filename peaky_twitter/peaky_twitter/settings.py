@@ -77,7 +77,6 @@ LOGOUT_REDIRECT_URL = '/tweets/'
 
 WSGI_APPLICATION = 'peaky_twitter.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
