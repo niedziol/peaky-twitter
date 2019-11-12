@@ -3,9 +3,14 @@
 Django app inspired by Twitter for academic purposes.
 
 To run this app you should:
+* clone this repo
+```
+git clone git@github.com:niedziol/peaky-twitter.git
+```
+
 * activate virtual environment
 ```
-virtualenv venv
+virtualenv -p python3 venv
 . venv/bin/activate
 ```
 
@@ -17,6 +22,11 @@ pip install -r requirements.txt
 * navigate to project folder
 ```
 cd peaky_twitter
+```
+
+* create a secret key
+```
+echo "itsasecretdontlook" > secret.txt
 ```
 
 * run migrations
