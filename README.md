@@ -14,6 +14,11 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
+* navigate to project folder
+```
+cd peaky_twitter
+```
+
 * run migrations
 ```
 python manage.py migrate
