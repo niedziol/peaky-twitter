@@ -5,7 +5,8 @@ Django app inspired by Twitter for academic purposes.
 To run this app you should:
 * clone this repo
 ```
-git clone git@github.com:niedziol/peaky-twitter.git
+git clone git@github.com:niedziol/peaky-twitter.git      # ssh
+git clone https://github.com/niedziol/peaky-twitter.git  # https
 ```
 
 * activate virtual environment
